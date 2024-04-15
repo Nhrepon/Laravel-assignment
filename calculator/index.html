@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator app</h1>
+        <div class="calculator d-flex flex-column">
+            <div class="input-group my-5">
+                <input id="value1" class="form-control" type="number"/>
+                <input id="value2" class="form-control" type="number"/>
+                <select class="form-select" name="operator" id="operator" >
+                    <option selected>Choose operator</option>
+                    <option value="+">Addition (+)</option>
+                    <option value="-">Subtraction (-)</option>
+                    <option value="/">Division (/)</option>
+                    <option value="*">Multiplication (*)</option>
+                </select>
+            </div>
+            <button id="button" onclick="calculate()" class="btn btn-success position-right my-3" type="submit">Calculate</button>
+            <div class="result d-flex my-3">
+                <h3 id="result"></h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculate(){
+            let value1=document.getElementById('value1').value;
+            let val1=parseFloat(value1);
+            let value2=document.getElementById('value2').value;
+            let val2=parseFloat(value2);
+            let e=document.getElementById('operator');
+            let operator=e.value;
+            if(value1 == "" && value2 == ""){
+                document.getElementById('result').innerHTML="Please enter a valid number into input box"
+            }else if(operator == "Choose operator"){
+                document.getElementById('result').innerHTML="Please select an operator";
+            }else{
+                let result;
+            if(operator== "+"){
+                result = val1 + val2 ;
+            }else if(operator== "-"){
+                result = val1 - val2 ;
+            }else if(operator== "*"){
+                result = val1 * val2 ;
+            } else if(operator== "/"){
+                result = val1 / val2 ;
+            }
+
+            document.getElementById('result').innerHTML="Result: "+result;
+            }
+        }
+        
+    </script>
+</body>
+</html>
