@@ -11,7 +11,7 @@ class BankAccount{
     deposit(amount){
         this.#balance+=amount;
 }
-    cashOut(amount){
+    withdraw(amount){
         this.#balance -= amount;
 }
 getBalance(){
@@ -26,7 +26,7 @@ displayAccountInfo(){
 const account = new BankAccount();
 account.deposit(100);
 console.log(account.getBalance());
-account.cashOut(100);
+account.withdraw(100);
 console.log(account.getBalance());
 console.log(account.displayAccountInfo());
 
