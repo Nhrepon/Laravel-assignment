@@ -1,0 +1,14 @@
+.container{
+    width: 1200px;max-width:100%; height:100vh;margin:auto;display: flex;justify-content: center;align-items: center;font-family: "Helvetica Neue",Helvetica);
+}
+.profile-card{ width: 300px; height: auto; background: rgb(236, 239, 241); text-align: center; border-radius:15px ;padding: 20px; margin: auto;box-shadow: 1px 1px 10px black;}
+.profile-card-image{ width: 150px;height: auto; border-radius: 50%;box-shadow: 1px 1px 10px black; }
+.profile-card-title{font-weight: bold;margin: 5px auto;color: rgb(16, 138, 0);}
+.profile-card-occupation, .profile-card-description{color: rgb(181, 194, 0);}
+.profile-card .section{display: flex;flex-direction: row;justify-content: space-around;font-weight: bold;margin: 10px auto;}
+.profile-card .section p{margin: 5px auto;}
+.profile-card .section .project{color: green;}
+.profile-card .section .following{color: red;}
+.profile-card .section .followers{color: blue;}
+.profile-card .contact-details{text-align: left;margin: 5px auto;}
+.profile-card .contact-details p{margin: 5px auto;}
